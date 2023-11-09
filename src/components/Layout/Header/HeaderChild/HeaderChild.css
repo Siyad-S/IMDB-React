@@ -1,0 +1,109 @@
+.imdb_icon {
+    height: 55px;
+    width: 85px;
+}
+.imdb_icon img{
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.imdb_icon img:hover {
+    transform: scale(1.1); 
+    cursor: pointer;
+}
+.menu button{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    background: black;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.menu button:hover {
+    background-color: rgb(47, 46, 46);
+}
+.menu i {
+    width: 24px;
+    height: 24px;
+    color: white;
+}
+.search {
+    height: 35px;
+    display: flex;
+    flex: 1;
+}
+.search input {
+    height: 100%;
+    border: transparent;
+    flex: 1;
+    border-radius: 4px 0px 0px 4px;
+    padding: 0px 10px;
+}
+.search button {
+    height: 100%;
+    border: transparent;
+    background-color: white;
+    padding: 7px;
+    border-radius: 0px 4px 4px 0px;
+    cursor: pointer;
+}
+.search button i {
+    font-size: 23px;
+    color: rgb(124, 119, 119);
+}
+.Watchlist button i {
+    width: 24px;
+    height: 24px;
+    color: white;
+}
+.Watchlist button {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    border: none;
+    background: black;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.Watchlist button:hover {
+    background-color: rgb(47, 46, 46);
+}
+.sign_in {
+    display: flex;
+}
+.sign_in button {
+    color: white;
+    text-decoration: none;
+    padding: 9px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    background: black;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+.sign_in button:hover {
+    background-color: rgb(47, 46, 46);
+}
+.icon_with_menu {
+    display: flex;
+    align-items: center;
+    padding-left: 45px;
+    gap: 27px;
+}
+.watch_sign {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-right: 45px;
+}

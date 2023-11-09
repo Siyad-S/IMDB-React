@@ -1,0 +1,21 @@
+.movie_details_page {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    background-color: black;
+}
+.searched_movie_container {
+    max-width: 1550px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+.related_movie_container h2 {
+    color: white;
+}
+.related_movie_container {
+    max-width: 1550px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,32 @@
+.movie_detail_card {
+    display: flex;
+    background-color: #232020;
+    color: white;
+}
+.movie_detail_image {
+    width: 400px;
+    height: 400px;
+    padding: 30px;
+}
+.movie_detail_image img{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+.movieDetail_content {
+    padding: 30px;
+}
+.movieDetail_content h3{
+    margin: 0;
+    font-size: 35px;
+}
+.movieDetail_content h5{
+    margin: 0;
+    font-size: 20px;
+    line-height: 40px;
+}
+.movieDetail_content h6{
+    margin: 0;
+    font-size: 15px;
+    line-height: 30px;
+}
