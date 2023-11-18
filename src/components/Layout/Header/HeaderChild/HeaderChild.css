@@ -98,12 +98,12 @@
 .icon_with_menu {
     display: flex;
     align-items: center;
-    padding-left: 45px;
+    padding-left: 50px;
     gap: 27px;
 }
 .watch_sign {
     display: flex;
     align-items: center;
-    gap: 20px;
-    padding-right: 45px;
+    gap: 19px;
+    padding-right: 30px;
 }

@@ -2,27 +2,12 @@ import React from "react";
 import "../MainBody/Body.css";
 import { useNavigate } from "react-router-dom";
 
-const Body = ({ movieCard }) => {
-  const navigate = useNavigate(); // Move the useNavigate hook inside the component function
+const Body = ({ movieCard, setSearchInput }) => {
+  const navigate = useNavigate();
 
-  let content = null;
-
-  if (Array.isArray(movieCard) && movieCard.length > 0) {
-    content = (
-      <div className="movie_card_div">
-        {movieCard.map((movie) => (
-          <div className="movie_card" key={movie.id} onClick={() => navigate(`/moviedetail/${movie.id}`)}>
-            <div className="movie_card_image">
-              <img src={movie.image} alt="" />
-            </div>
-            <div className="movie_content">
-              <h4>{movie.title}</h4>
-              <h5>{movie.year}</h5>
-            </div>
-          </div>
-        ))}
-      </div>
-    );
+  function handleSetSearchInput(id) {
+    navigate(`/moviedetail/${id}`)
+    setSearchInput("")
   }
 
   return (
@@ -35,7 +20,28 @@ const Body = ({ movieCard }) => {
           />
         </div>
         <div className="card_container">
-        {content}
+
+          {Array.isArray(movieCard) && movieCard.length > 0 ? (
+            <div className="movie_card_div">
+              {movieCard.map((movie) => (
+                <div
+                  className="movie_card"
+                  key={movie.id}
+                  onClick={() => handleSetSearchInput(movie.id)}
+                >
+                  <div className="movie_card_image">
+                    <img src={movie.image} alt="" />
+                  </div>
+                  <div className="movie_content">
+                    <h4>{movie.title}</h4>
+                    <h5>{movie.year}</h5>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <p></p>
+          )}
         </div>
       </div>
     </div>

@@ -24,12 +24,10 @@ const Header = ({ setMovieData, searchInput, setSearchInput }) => {
   }, [searchInput, setMovieData]);
 
   useEffect(() => {
-    setSearchInput(""); 
-    setMovieData([]);
-  }, [reload, setSearchInput, setMovieData]);
-
-
-
+    if (searchInput === "") {
+      setMovieData([]);
+    }
+  }, [searchInput, setMovieData]);
 
   return (
     <>

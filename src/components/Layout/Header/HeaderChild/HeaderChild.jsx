@@ -1,11 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { useNavigate } from 'react-router-dom'
 import "../HeaderChild/HeaderChild.css"
+import { DataContext } from '../../Context/contextApi'
 
 const HeaderChild = ({search, handleSearch, searchInput}) => {
+
+  const { watchlist } = useContext(DataContext)
+  let navigate = useNavigate();
+
   return (
     <>
     <div className="icon_with_menu">
-            <div className="imdb_icon">
+            <div className="imdb_icon" onClick={() => navigate("/")}>
               <img
                 src="https://download.logo.wine/logo/IMDb/IMDb-Logo.wine.png"
                 alt=""
@@ -23,7 +29,7 @@ const HeaderChild = ({search, handleSearch, searchInput}) => {
               type="search"
               placeholder="Search IMDB"
               name="search"
-              value={searchInput !== null ? searchInput : ''}
+              value={searchInput || ''}
               onChange={handleSearch}
               onKeyDown={handleSearch}
               onKeyUp={search}
@@ -35,7 +41,8 @@ const HeaderChild = ({search, handleSearch, searchInput}) => {
           </div>
           <div className="watch_sign">
             <div className="Watchlist">
-              <button>
+              <button onClick={() => navigate(`/watchlist`)}>
+              ({watchlist.length}) 
                 <i className="material-symbols-outlined">playlist_add</i>
                 Watchlist
               </button>

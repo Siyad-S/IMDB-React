@@ -20,8 +20,7 @@
 }
 .showSearchedMovies_card:hover {
     transform: scale(1.1); 
-    /* background-color: rgb(58 54 54);
-    color: gold; */
+    cursor: pointer;
   }
 .showSearchedMovies_card_image {
     height: 65px;

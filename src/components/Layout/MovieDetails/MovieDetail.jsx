@@ -44,7 +44,6 @@ const MovieDetail = ({ movieData }) => {
       <div className="body_container ">
         <MovieDetailCard movieDetail={movieDetail} />
         <div className="related_movie_container">
-          {/* <h2>Related Movies</h2> */}
           <RelatedMovies movieDetailSearch={movieDetailSearch} navigate={navigate} />
         </div>
         <div className="searched_movie_container">
